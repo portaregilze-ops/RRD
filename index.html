@@ -3,35 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mijn Video</title>
+<title>RRD</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: #000;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  body { background: #000; }
   header {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 0; right: 0;
     padding: 16px 24px;
     z-index: 10;
   }
-  header img {
-    height: 40px;
-    width: auto;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
+  header img { height: 40px; }
   video {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     object-fit: contain;
     display: block;
@@ -39,16 +23,11 @@
 </style>
 </head>
 <body>
-
 <header>
   <img src="PortareBenelux_Logo_Diap vierkant.png" alt="Logo">
 </header>
-
-<main>
-  <video autoplay loop muted playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-</main>
-
+<video autoplay loop muted playsinline>
+  <source src="video.mp4" type="video/mp4">
+</video>
 </body>
 </html>
