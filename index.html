@@ -3,66 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>video.mp4</title>
+<title>Mijn Video</title>
 <style>
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0e0e10;
-    color: #f5f5f5;
+    background: #000;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
     padding: 16px 24px;
+    z-index: 10;
   }
   header img {
     height: 40px;
     width: auto;
   }
   main {
+    flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 24px;
-  }
-  .video-wrapper {
-    width: 100%;
-    max-width: 960px;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    justify-content: center;
+    min-height: 100vh;
   }
   video {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    object-fit: contain;
     display: block;
-  }
-  h1 {
-    margin-top: 24px;
-    font-size: 1.4rem;
-    font-weight: 600;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="PortareBenelux_Logo_Diap vierkant.png" alt="Logo">
+  <img src="logo.png" alt="Logo">
 </header>
 
 <main>
-  <div class="video-wrapper">
-    <video controls preload="metadata">
-      <source src="video.mp4" type="video/mp4">
-      Je browser ondersteunt geen video-tag.
-    </video>
-  </div>
-  <h1>Mijn Video</h1>
+  <video autoplay loop muted playsinline>
+    <source src="video.mp4" type="video/mp4">
+  </video>
 </main>
 
 </body>
